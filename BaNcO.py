@@ -15,13 +15,13 @@ LIMITE_SAQUES = 5
 limite = 800
 
 def criar_usuario():
-    cpf = input("Informe o CPF (somente números): ")
+    cpf = input("Informe o CPF (apenas números): ")
     if cpf in usuarios:
-        print("Usuário já cadastrado.")
+        print("Este usuário já esta cadastrado.")
     else:
         nome = input("Informe o nome: ")
         usuarios[cpf] = nome
-        print(f"Usuário {nome} criado com sucesso.")
+        print(f" O usuário {nome} foi criado com sucesso.")
 
 def criar_conta_corrente():
     cpf = input("Informe o CPF do usuário: ")
@@ -30,7 +30,7 @@ def criar_conta_corrente():
     else:
         numero_conta = len(contas) + 1
         contas[numero_conta] = {"cpf": cpf, "saldo": 0, "extrato": "", "numero_saques": 0}
-        print(f"Conta corrente {numero_conta} criada com sucesso para o usuário {usuarios[cpf]}.")
+        print(f"Conta corrente {numero_conta}  foi criada com sucesso para o usuário {usuarios[cpf]}.")
 
 def depositar():
     numero_conta = int(input("Informe o número da conta: "))
